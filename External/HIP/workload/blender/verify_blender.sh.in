@@ -1,0 +1,8 @@
+#!/bin/bash
+
+grep "Blender test passes" $1
+ret=$?
+if [[ $ret -ne 0 ]]; then
+  cat $1
+fi
+exit $ret
